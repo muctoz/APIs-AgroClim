@@ -2,6 +2,7 @@ const { Router } = require("express");
 
 const HealthCheck = require("./Controlers/healthCheckController");
 const ScrapperController = require("./Controlers/WebScrapperController");
+const Wheather = require("./Controlers/wheatherController");
 
 const routes = Router();
 
@@ -14,5 +15,6 @@ const routes = Router();
  */
 routes.get("/", HealthCheck.healthCheck);
 routes.post("/WebScrapper", ScrapperController.WebScrapper);
+routes.post("/Wheather", Wheather.Wheather);
 
 module.exports = routes;

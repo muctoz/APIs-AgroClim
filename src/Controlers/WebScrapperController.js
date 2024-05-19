@@ -7,10 +7,11 @@ async function WebScrapper(params, resp){
   let url = `${process.env.URL_BASE}${Product}`
   console.log(url)
   try {
-    const response = await axios.get(url)
+    const response = await axios.get(url);
     resp.json(response.data)
   }catch(error){
     resp.status(500).json({error: "Erro na consulta!"})
+    
   };
 }
 
