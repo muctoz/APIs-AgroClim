@@ -3,8 +3,8 @@ require("dotenv").config();
 
 async function WebScrapper(params, resp){
 
-  const{Product} = params.body ;
-  let url = `${process.env.URL_BASE}${Product}`
+  const{product} = params.body ;
+  let url = `${process.env.URL_BASE}${product}`
   console.log(url)
   try {
     const response = await axios.get(url);
