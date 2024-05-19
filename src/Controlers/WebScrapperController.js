@@ -1,19 +1,23 @@
-const { execFile } = require("child_process");
+const axios = require("axios");
+require("dotenv").config();
 
-const WebScrapper = (req, res) => {
-  console.log("antes de ir");
-  execFile("./src/WebScrapper/webscrapping.py", (error, stdout, stderr) => {
-    if (error) {
-      console.error(`error: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.error(`stderr: ${stderr}`);
-      return;
-    }
-    console.log(`stdout: ${stdout}`);
-    // Aqui você pode enviar uma resposta para o cliente ou realizar outras ações necessárias
-  });
-};
+async function WebScrapper(params, resp){
+
+  const{Product} = params.body ;
+  let url = `${process.env.URL_BASE}${Product}`
+  console.log(url)
+  try {
+    const response = await axios.get(url)
+    resp.json(response.data)
+  }catch(error){
+    resp.status(500).json({error: "Erro na consulta!"})
+  };
+}
+
+
+
+
+
+
 
 module.exports = { WebScrapper };

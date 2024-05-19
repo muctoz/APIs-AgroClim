@@ -13,6 +13,6 @@ const routes = Router();
  *         description: sucess
  */
 routes.get("/", HealthCheck.healthCheck);
-routes.get("/WebScrapper", ScrapperController.WebScrapper);
+routes.post("/WebScrapper", ScrapperController.WebScrapper);
 
 module.exports = routes;
