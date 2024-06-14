@@ -1,4 +1,4 @@
-Ambas as funcionalidades dependem das suas chaves de acesso, elas não foram disponibilizadas neste repositorior por serem senviveis e futuramente gerar algum tipo de custo para mim.
+Ambas as funcionalidades dependem das suas chaves de acesso, elas não foram disponibilizadas ou estão inativas neste repositorior por serem senviveis e futuramente gerar algum tipo de custo para mim.
 
 
 
